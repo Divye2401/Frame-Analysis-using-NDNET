@@ -123,7 +123,16 @@ to constrained bandwidth, causing a minor decline in performance.
 
 
 
+### Future Work 
 
+For future work, we would like to expand on this experiment. The major issue is latency for which we could employ a new
+model with a smaller architecture that performs similarly to NDNetGaming while being smaller. We could also look at
+implementing techniques like model parallelism to divide the model into smaller parts processed simultaneously, optimizing the computation and reducing latency. We can also work on
+optimizing the algorithm specifially for real - time application, ensuring faster and simultaneous updates.
+We could also look into Reinforcement Learning by using a DRL along with our CNN to have a hybrid model that can
+optimize decisions and update frame quality based on real - time observations.
+We would also like to create a much larger dataset with different genres of games, all having various bitrate representations
+to further justify our findings and seek improvements.
 
 
 
