@@ -26,7 +26,7 @@ of image quality. They pool the frame-level predictions to a video quality score
 
 
 
-
+!image[![image](https://github.com/Divye2401/Frame-Analysis-using-NDNET/assets/52701687/f2ec3e7d-46d0-4d29-8425-8bb2a11ea447)]
 
 ### Installation
 
