@@ -35,9 +35,19 @@ the Keras model into a format suitable for web deployment by executing tfjs.conv
 
 ![image](https://github.com/Divye2401/Frame-Analysis-using-NDNET/assets/52701687/b65a123e-eebe-4896-96ee-232466b86421)
 
-*
+* To begin calculating the frame quality, we needed to first access the current frames which were playing in the dash.js
+window, and for that we developed a function called process Frame().The processFrame function’s main objective was to capture the frame that was currently playing in the video window and execute additional operations on it. The function initiated the process by creating a canvas element along with its rendering context, an image element, and a download link. It then extracted the current time of the video and calculated the corresponding frame number based on a frame rate of 30 frames per second. the function set the dimensions of the canvas to match the video’s width and height and drew the current video frame onto the canvas. The pixel data of the drawn image was obtained using the getImageData method. This pixel data was converted to a data URL in PNG format, and the image element’s source was set to display the captured frame. Additionally, a download link was configured to allow users to download the frame as a PNG
+file.
+
+* The runModel() function was designed to take an image frame as input and produce an average prediction using the previously defined NDNET model. The resulting predictions were used to calculate the average prediction value. This was achieved by taking the mean of the predictions using predictions.mean().dataSync()[0]. The average prediction reflected average frame quality calculated for that set of frames,
+which was then displayed in the frontend.
 
 
+## Prequisites
+
+The Bento4 package was employed to seamlessly convert a video into Dynamic Adaptive Streaming over HTTP (DASH)
+format. After downloading the MSI installer, PowerShell was opened at the package’s bin folder. The video was initially
+fragmented using the "mp4fragment input.mp4 output.mp4" command. Subsequently, the transformation to a Media Presentation Description (MPD) format suitable for DASH was achieved through the "mp4dash –hls input.mp4" command. This conversion process, executed in PowerShell, resulted in an output folder containing essential files for DASH playback. Bento4’s capabilities facilitated the efficient adaptation and distribution of video content across diverse platforms using the DASH standard.j
 
 
 ### Installation
