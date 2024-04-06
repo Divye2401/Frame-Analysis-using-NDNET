@@ -71,6 +71,56 @@ _Below is an example of how you can instruct your audience on installing and set
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+### Results And Comparisions
+
+As the dataset created and used by the authors of the NDNetGaming model was not publicly available (requried password), we decided to create a dataset comprising of four distinct genres of games which include Multiplayer Online Battle Arenas (MOBAs), First Person Shooters (FPS), single player and sports titles, to ensure a diverse range of contents to test the performance of the model with. The videos were all in 720p resolution and had a framerate of 30 Frames Per Second (FPS). Basic preprocessing was conducted to run our experiments ith the CNN model. Our goal was ensuring the effectiveness
+of the model for different genres of games.
+
+#### Model Efficacy Evaluation
+
+To evaluate our first experiment, we used the DASH player integrated with the NDNetGaming model to run and display the videos in our gaming dataset. The results of the experiment were plotted as Average Frame
+Quality vs Iterations for the different genres of games From the graph, we can see that: Rainbow Six Siege and Dota were deemed as higher-quality games, likely attributed to their
+in-game actions being more prominent and distinctive.Valorant exhibited the lowest mean average, with the model recording lower values during tense non-animated situations.
+Additionally, it seemed to struggle with classifying important and non-important actions.
+Fifa experienced notable drops in quality, primarily stemming from frame freezes during specific replays or cutscenes.
+![image](https://github.com/Divye2401/Frame-Analysis-using-NDNET/assets/52701687/cfe5586a-43b3-4fcd-b8bd-c6a3c33ba531)
+
+
+#### Adaptive Bitrate Algorithms Comparison
+
+Due to our inability to create different bitrate-based encodings for our custom dataset, the selected videos were stalling excessively as it tried to maintain the one desired bitrate. Hence,
+even though frame quality was maintained the actual user QOE was extensively degraded. Hence, we decided to use
+the default ‘bunny’ video located in the official dash player repository for ABR testing purposes.
+
+* #### No Throttling
+The videos were tested under the maximum available bandwidth to identify differences in normal scenarios. The default ABR algorithm initially faced challenges as the model loaded, but eventually caught up with the others. All other algorithms displayed nearly identical behavior, with LoL+ demonstrating
+the best performance.
+
+![image](https://github.com/Divye2401/Frame-Analysis-using-NDNET/assets/52701687/7a8bdeda-04e0-4730-872a-77e992d398d5)
+
+* #### Slow 3G
+A constrained bandwidth scenario was simulated by selecting the slow 3G option in the Dash player. Bola exhibited the poorest performance among all the options, leading to frequent stutters and quality drops. L2A-LL experienced significant buffering at the start of the video but gradually caught up. Lol+ consistently delivered the highest average quality, although it
+experienced slight degradation towards the end. 
+* BOLA might have struggled in adapting to the constrained
+bandwidth of slow 3G due to its conservative approach or
+slower reaction time in adjusting the video bitrate. This hesitation or delay of BOLA in adapting to fluctuating network
+conditions could have caused frequent stutters and drops in
+quality, as the available bandwidth varied based on slow 3G,
+causing disruptions in the streaming experience.
+
+* L2A-LL probably encountered initial buffering because of its attempt to optimize video quality based on predicted future bandwidth availability. This predictive nature may have caused a delay in the start of the video as it attempted to ensure a smoother streaming experience. However, once it adjusted to
+the limited bandwidth, it gradually caught up by adapting the
+bitrate, resulting in improved performance over time.
+
+* LoL+ showcased a fairly superior performance by consistently
+delivering higher average frame quality when compared to
+other algorithms under slow 3G conditions. Its efficient adaptation ability may have allowed it to maintain a higher quality
+for a longer duration. However, towards the end, a slight
+degradation might have occurred due to prolonged exposure
+to constrained bandwidth, causing a minor decline in performance.
+
+![image](https://github.com/Divye2401/Frame-Analysis-using-NDNET/assets/52701687/c8265a92-ed32-40d6-b2ed-df40146f98dd)
+
 
 
 
