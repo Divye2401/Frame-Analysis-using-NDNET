@@ -1,18 +1,13 @@
 ## Introduction
 
-The increase in popularity of live streaming of segmented
-videos has given content providers the ability to offer multiple
-representations of the same video. This study investigates the
-relationship between the average frame quality as a metric and
-gaming experiences by connecting a Neural Network model,
-named NDNetGaming [6], to a DASH player. The primary
+The increase in popularity of live streaming of segmented videos has given content providers the ability to offer multiple representations of the same video. This study investigates the relationship between the average frame quality as a metric and gaming experiences by connecting a Neural Network model, named NDNetGaming, to a DASH player. The primary
 objective of this study was to assess frame quality across different gaming genres, and also evaluate different adaptive bitrate algorithms’ performance when applied to video content with
-various bitrate representations using that frame quality metric. The experiment encompassed a comprehensive analysis under varying network conditions, including reduced throughput scenarios. The methodology of the experiment involved integrating NDNetGaming with a JavaScript DASH player
+various bitrate representations using that frame quality metric. The experiment encompassed a comprehensive analysis under varying network conditions, including reduced throughput scenarios. The methodology of the experiment involved integrating NDNetGaming with a JavaScript DASH player
 to capture and measure the average frame qualities across different gaming genres. The evaluation includes assessing this frame quality metric in Unrestricted Throughput and Slow 3G scenarios while applying different adaptive bitrate strategies to determine the one with the least stalling and latency. 
 
-The findings reveal significant insights between frame quality and gaming experiences. Further, the study sheds light on the efficacy of Dynamic, Throughput, Buffer-based (BOLA), L2A-LL and
+The findings reveal significant insights between frame quality and gaming experiences. Further, the study sheds light on the efficacy of Dynamic, Throughput, Buffer-based (BOLA), L2A-LL and
 LoL+ adaptive bitrate algorithms when subjected to varying network conditions, with an aim to provide an enhanced user experience.
-This research contributes to the understanding of how the frame quality effects gaming immersion to offer practical implications for optimizing video streaming applications to deliver high quality content, improving user satisfaction. From the results of our evaluation, Dota2 displayed the most consistent frame quality, Rainbow Six Siege being a slower First Person Shooter (FPS) also displayed consistency in frame
+This research contributes to the understanding of how the frame quality effects gaming immersion to offer practical implications for optimizing video streaming applications to deliver high quality content, improving user satisfaction. From the results of our evaluation, Dota2 displayed the most consistent frame quality, Rainbow Six Siege being a slower First Person Shooter (FPS) also displayed consistency in frame
 quality, Valorant showed a drop in frame quality in some sequences and FIFA had many fluctuations in average frame quality.
 
 
