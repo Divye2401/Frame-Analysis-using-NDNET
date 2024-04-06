@@ -27,7 +27,7 @@ and updating the frontend section of the player respectively. The main.js file c
 metrics such as buffer length, bitrate etc. Hence for the purposes of our project, we decided to create another global scope variable by the name of ‘AvgFrameQuality’ which would be
 further displayed in the UI.
 
-*To initialize and load the model, we decided to integrate it within the player’s init session itself, thereby loading it up
+* To initialize and load the model, we decided to integrate it within the player’s init session itself, thereby loading it up
 once the video was initially fetched. However ,since the original format was in keras we had to ensure that the model was converted to the desired .json format compatible with node.js.
 To convert a Keras model into a TensorFlow.js-compatible model, we employed the TensorFlow.js converter to transform
 the Keras model into a format suitable for web deployment by executing tfjs.converters.save_keras_model() function
