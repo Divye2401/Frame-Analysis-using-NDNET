@@ -42,6 +42,8 @@ file.
 * The runModel() function was designed to take an image frame as input and produce an average prediction using the previously defined NDNET model. The resulting predictions were used to calculate the average prediction value. This was achieved by taking the mean of the predictions using predictions.mean().dataSync()[0]. The average prediction reflected average frame quality calculated for that set of frames,
 which was then displayed in the frontend.
 
+* The update metrics function was used as a main() call, to call the respective functions and correspondingly update the video metrics per each frame cycle. In order to prevent the buffer from emptying due to high computations required per model prediction, we decided to introduce a delay of about 5 seconds between each model prediction. This allowed the buffer to sufficiently recharge while simultaneously calculating all the other metrics as usual. The models inference was also put on hold when the player was paused so as to avoid unnecessary
+wastage of resources. 
 
 ## Prequisites
 
