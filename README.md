@@ -14,6 +14,9 @@ quality, Valorant showed a drop in frame quality in some sequences and FIFA had
 
 ## NDNET Model
 
+
+![image](frameanalysis.png)
+
 NDNETGAMING MODEL OVERVIEW
 The authors of ’NDNetGaming’, Markus et al aimed to design a CNN based quality model, but were faced with many challenges while attempting to do so. They mention that inputting an entire video instead of an image comes with drawbacks such as the requirement of higher processing power and more data. To overcome these challenges, they designed the model
 NDNetGaming Model Architecture in three phases. As the authors mention, in the first phase, the model is allowed to learn typical video compression artifacts depending on the frame - level objective quality metric. Since every objective quality metric involves error, the second phase was created to fine-tune the model using subjective ratings
